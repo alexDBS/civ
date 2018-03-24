@@ -1,4 +1,4 @@
 <?php
 echo "Hello World!<br/>"
-echo "today is: ".date();
+echo "today is: ".time();
 ?>
