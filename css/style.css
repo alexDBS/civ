@@ -1,0 +1,194 @@
+/*MAIN BODY*/
+
+body {
+	background-color: #f0eeee;
+	width: 95%;
+	margin: auto;
+	font-family: 'Barlow Condensed', sans-serif;
+	font-size: 25px;
+	align-content: center;
+}
+
+h1{
+	text-align: center;
+}
+.coreBlock {
+	position: relative;
+	float: clear;
+	top: 75px;
+	max-width: 90%;
+	align-content: center;
+	margin: auto;
+	border: solid;
+	border width: 0.5px;
+	border-radius: 8px;
+}
+
+p{
+	text-align: justify;
+}
+p.indent{
+	padding: 0px 10px 0px 20px;
+}
+
+/*TOP MENU*/
+
+header {
+	padding: 5px;
+	z-index: 1;
+	width: 100%;
+	background-color: #f0eeee;
+	position: fixed;
+}
+div.topNav {
+	max-width: 400px;
+	cursor: pointer;
+}
+#mainMenu {
+	background-color: transparent;
+}
+
+#logo {
+	height: 100%;
+	width: 100%;
+	object-fit: contain;
+	/*restrict to the boundaries of the div*/
+}
+/* SIDE NAVIGATION*/
+
+.sideNav {
+	height: 100%;
+	width: 0;
+	z-index: 1;
+	position: fixed;
+	background-color: #446981;
+	overflow: hidden;
+	transition: 0.5s;
+	font-size: 25px;
+	text-align: right;
+}
+.sideNav a {
+	text-decoration: none;
+	color: #ffffff;
+	display: block;
+	padding: 5px;
+}
+ul {
+	list-style-type: none;
+}
+.sideNav li:hover, li:focus {
+	background-color: #8cbe9a;
+}
+/*SLIDESHOW*/
+
+.slideContainer {
+	position: relative;
+	margin: auto;
+}
+.slides {
+	display: none;
+}
+.wideImage {
+	width: 100%;
+}
+.smallImage{
+	width: 100%;
+	border-radius: 25px;
+}
+/*Text Captions*/
+
+.caption {
+	color: #fdfdfd;
+	font-size: 30px;
+	position: absolute;
+	bottom: 8%;
+	left: 3%;
+}
+
+
+.tripAdvisor{
+	max-width: 300px;
+	float: right;
+	z-index: 1;
+	position: absolute;
+	bottom: 8%;
+	right: 5%;
+}
+
+
+
+/* Navigation Buttons */
+
+.prev, .next {
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	width: auto;
+	padding: 10px;
+	color: white;
+	font-weight: bold;
+	font-size: 25px;
+	border-radius: 0 5px 5px 0;
+}
+.next {
+	right: 0;
+	border-radius: 5px 0 0 5px;
+}
+.prev:hover, .next:hover {
+	background-color: #000000;
+}
+/*Star Rating Blocks*/
+
+.checked {
+	color: orange;
+}
+label, input, select, textarea, #sendForm {
+	display: block;
+	width: 25%;
+	box-sizing: content-box;
+	padding: 5px;
+	margin: 10px;
+	min-width: 200px;
+	
+}
+
+/*Content Descriptors*/
+h4{
+	margin: 20px;
+	text-align: center;
+}
+
+/* PICTURE BLOCKS */
+.layoutSquare{
+	overflow: hidden;	
+}
+.blockRight{
+	max-width: 700px;
+	margin: 20px;
+	float:right;
+	object-fit: contain;
+}
+.blockLeft{
+	max-width: 700px;
+	margin: 20px;
+	float:left;
+	object-fit: contain;
+}
+
+/* FORM FEEDBACK */
+#feedback{
+	display:none;
+	text-align: center;
+}
+	
+
+/*RESPONSIVE Elements*/
+@media only screen and (max-width: 500px) {
+	#logo {
+		width: 250px;
+		object-fit: contain;
+	}
+	.tripAdvisor{
+		display: none;
+	}
+}

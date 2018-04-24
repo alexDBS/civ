@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta content="Galway Inn Booking Form" name="description">
+	<meta content="Galway, Inn, B&B, Contacts, Bookings" name="keywords">
+	<meta content="Galway Inn" name="author">
+	<meta content="width=device-width, initial-scale=1" name="viewport">
+	<title>Galway Inn</title>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Barlow+Condensed" rel="stylesheet">
+	<link href="./css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<header>
+		<div class="topNav" onclick="openNav()"><img id="logo" src="./assets/icons/svgGalwayInnMaster.png"></div>
+	</header>
+	<div class="coreBlock" style="align-content: center;">
+		<div class="sideNav" id="sideNav">
+			<nav>
+				<ul class="menu">
+					<li class="menuEntry">
+						<a href="javascript:void(0)" onclick="closeNav()">x</a>
+					</li>
+					<li class="menuEntry">
+						<a href="./index.html">Welcome</a>
+					</li>
+					<li class="menuEntry">
+						<a href="./suites.html">Suites</a>
+					</li>
+					<li class="menuEntry">
+						<a href="./tours.html">Tours</a>
+					</li>
+					<li class="menuEntry">
+						<a href="./faq.html">Faq</a>
+					</li>
+					<li class="menuEntry">
+						<a href="./bookings.html">Bookings</a>
+					</li>
+					<li class="menuEntry">
+						<a href="./testimonials.html">Testimonials</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+			<h1>Booking and Contacts us form</h1>
+			<h4>Please use the form to below to book with us or ask any questions </h4>
+			<form>
+				<div class="input">
+					<label for="name">Name</label> <input id="name" name="name" placeholder="Name" required="" type="text" value="">
+				</div>
+				<div class="input">
+					<label for="email">Email</label> <input id="email" name="email" placeholder="Name" required="" type="email" value="">
+				</div>
+				<div class="input">
+					<label for="reason">Subject</label> <select id="reason" name="reason">
+						<option value="Booking">
+							Bookings
+						</option>
+						<option value="Question">
+							Question
+						</option>
+						<option value="Feedback">
+							Feddback
+						</option>
+					</select>
+				</div>
+				<div class="input">
+					<label for="comment">Message</label> 
+					<textarea id="comment" name="comment" placeholder="Message" required=""></textarea>
+				</div>
+				<div class="input">
+					<button type="button" id="sendForm" value="Send" onclick="formFeedBack()">Send!</button>
+				</div>
+				<div id="feedback">
+					<h3>Thanks for your Feedback<h3>
+				<div>
+			</form>
+	</div>
+	<script>
+	          /*SIDEBAR*/
+	          function openNav() {
+	              document.getElementById("sideNav").style.width = "200px";
+	          }
+
+	          function closeNav() {
+	              document.getElementById("sideNav").style.width = "0";
+	          }
+			  
+			  /*FORM_FEEDBACK*/
+	          function formFeedBack() {
+	              document.getElementById("feedback").style.display = "block";
+	          }		  
+	</script>
+</body>
+</html>

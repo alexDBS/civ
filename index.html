@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Galway Inn</title>
+</head>
+<body>
+	<meta charset="utf-8">
+	<meta content="Galway Inn Home page" name="description">
+	<meta content="Galway, Inn, B&B, Hotel" name="keywords">
+	<meta content="Galway Inn" name="author">
+	<meta content="width=device-width, initial-scale=1" name="viewport">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Barlow+Condensed" rel="stylesheet">
+	<link href="./css/style.css" rel="stylesheet" type="text/css">
+	<header id="mainMenu">
+		<div class="topNav" onclick="openNav()"><img id="logo" src="./assets/icons/svgGalwayInnMaster.png"></div>
+	</header>
+	<div class="sideNav" id="sideNav">
+		<nav>
+			<ul class="menu">
+				<li class="menuEntry">
+					<a href="javascript:void(0)" onclick="closeNav()">x</a>
+				</li>
+				<li class="menuEntry">
+					<a href="./index.html">Welcome</a>
+				</li>
+				<li class="menuEntry">
+					<a href="./suites.html">Suites</a>
+				</li>
+				<li class="menuEntry">
+					<a href="./tours.html">Tours</a>
+				</li>
+				<li class="menuEntry">
+					<a href="./faq.html">Faq</a>
+				</li>
+				<li class="menuEntry">
+					<a href="./bookings.html">Bookings</a>
+				</li>
+				<li class="menuEntry">
+					<a href="./testimonials.html">Testimonials</a>
+				</li>
+			</ul>
+		</nav>
+	</div>
+	<div class="slideContainer">
+		<div class="slides">
+			<img class="wideImage" src="./assets/index/moher1.jpg"> <span class="caption">Cliffs of Moher East</span>
+		</div>
+		<div class="slides">
+			<img class="wideImage" src="./assets/index/moher2.jpg"> <span class="caption">Cliffs Of Moher West</span>
+		</div>
+		<div class="slides">
+			<img class="wideImage" src="./assets/index/causeway.jpg"> <span class="caption">Giant Causeway</span>
+		</div>
+		<div class="slides">
+			<img class="wideImage" src="./assets/index/burrens.jpg"> <span class="caption">The Burren</span>
+		</div><a class="prev" onclick="showSlides(-1)">&#10094;</a> <a class="next" onclick="showSlides()">&#10095;</a>
+		<div class="tripAdvisor">
+			<a href="https://www.tripadvisor.ie/Hotels-g186609-Galway_County_Galway_Western_Ireland-Hotels.html"><img id="logo" src="./assets/index/tripAdvisor.png"></a>
+		</div>
+	</div>
+	<script>
+	          /*SIDEBAR*/
+	          function openNav() {
+	              document.getElementById("sideNav").style.width = "200px";
+	          }
+
+	          function closeNav() {
+	              document.getElementById("sideNav").style.width = "0";
+	          }
+
+
+	          /* SLIDESHOW */
+	          var slideIndex = 0;
+	          var slides = document.getElementsByClassName("slides"); /*get array of slides*/
+	          var timer=0; /*to keep track of the timeOut event id for future reset*/
+	          showSlides();
+
+	          function showSlides(n) {
+	              clearTimeout(timer);
+
+	              /*hide everyting*/
+	              for (i = 0; i < slides.length; i++){
+	                  slides[i].style.display = "none"; 
+	              }
+
+	              /*navigation +-*/
+	              if (n == -1){
+	                  slideIndex--;
+	              }
+	              else{
+	                  slideIndex++;
+	              }
+
+	              /*slide loop*/
+	              if (slideIndex > slides.length) {
+	                  slideIndex = 1;
+	              }
+	              else if (slideIndex < 1) {
+	                  slideIndex = slides.length;
+	              } 
+
+	              slides[slideIndex-1].style.display = "block";
+
+	              timer=setTimeout(showSlides, 4000); // Change image every 4 seconds
+	          }
+	</script>
+</body>
+</html>
